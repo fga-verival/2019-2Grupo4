@@ -295,16 +295,64 @@ END
 
 ## 4. Funcionamento do programa
 
-O programa não apresentou erros durante sua execução.
+O programa não apresentou erros de execução durante sua execução quando conectado a internet.
 
-Prints:
+* Durante a execução do programa, ao selecionarmos alguma das opções 3 ou 4, o programa dá a sensação ao usuário de que está travado, mas na verdade está buscando as informações requisitadas na API, então uma simples mensagem de "carregando" ou "buscando" ajudaria muito na percepção do usuário sobre o programa.
+
+Durante e execução do programa sem conexão com internet
+
+* Durante a execução do programa, ao selecinoar-mos quaisquer opções exceto a de finalizar o programa, temos um feedback de falha de comunicação com a api, mas ao mesmo tempo temos um erro de atributo da classe Connect, o que para um possível usuário deste software sem conhecimentos em programação ou até mesmo um programador que não possui acesso ao código, ou não conhece o código, não conseguiria resolver este problema.
+
+Execução com entradas incorretas
+
+* Durante a execução do programa, ao colocar entradas não esperadas pelo programa, ele consegue fazer o tratamento das entradas e avisa ao usuário que a entrada está incorreta, mas ao dar esta mensagem, o programa leva alguns segundo para retornar o usuário à tela principal, o que pode gerar desconforto, até mesmo por que o programa retorna sozinho, e por um descuido do usuário, ele pode desviar o olhar e acabar não vendo a mensagem de erro.
+
+## 5. Execução do programa
+
+### Execução com internet
+
+- Opção 1:
 
 ![Próximo lançamento](imgs/1.png)
 
+- Opção 2:
+
 ![Último lançamento](imgs/2.png)
+
+- Opção 3:
 
 ![Próximos lançamento](imgs/3.png)
 
+- Opção 4:
+
 ![Lançamento passados](imgs/4.png)
 
+- Opção 5:
+
 ![Sair](imgs/5.png)
+
+### Execução sem internet
+
+![Próximo lançamento](imgs/1ni.png)
+
+- Opção 2:
+
+![Último lançamento](imgs/2ni.png)
+
+- Opção 3:
+
+![Próximos lançamento](imgs/3ni.png)
+
+- Opção 4:
+
+![Lançamento passados](imgs/4ni.png)
+
+- Opção 5:
+
+![Sair](imgs/5ni.png)
+
+
+### Execução com entradas incorretas
+
+![Próximo lançamento](imgs/EntradaIncorreta.jpg)
+
