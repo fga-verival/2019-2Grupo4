@@ -292,3 +292,19 @@ BEGIN
 
 END
 ```
+
+## 4. Funcionamento do programa
+
+O programa não apresentou erros durante sua execução.
+
+Prints:
+
+![Próximo lançamento](/imgs/1.png)
+
+![Último lançamento](/imgs/2.png)
+
+![Próximos lançamento](/imgs/3.png)
+
+![Lançamento passados](/imgs/4.png)
+
+![Sair](/imgs/5.png)
