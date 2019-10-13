@@ -10,48 +10,48 @@
 ### spaceX.py    
 
 ```
-    IMPORTE Connect DE connections
+    IMPORT Connect DE connections
 
     NEXT_LAUNCH = 1
     LATEST_LAUNCH = 2
     UPCOMING_LAUNCHES = 3
     PAST_LAUNCHES = 4
 
-    ENQUANTO 1 FAÇA
-        ESCREVA ("O que você deseja visualizar?")
-        ESCREVA ("1) Próximo Lançamento")  
-        ESCREVA ("2) Último Lançamento")   
-        ESCREVA ("3) Próximos Lançamentos")  
-        ESCREVA ("4) Lançamentos Passados")
-        ESCREVA ("5) Sair")
+    WHILE 1 DO
+        PRINT ("O que você deseja visualizar?")
+        PRINT ("1) Próximo Lançamento")  
+        PRINT ("2) Último Lançamento")   
+        PRINT ("3) Próximos Lançamentos")  
+        PRINT ("4) Lançamentos Passados")
+        PRINT ("5) Sair")
 
-        ESCREVA ("Insira uma opção: ")
-        LEIA(option) 
+        PRINT ("Insira uma opção: ")
+        SCAN(option) 
         
-        SE option != INTEIRO ENTÃO
-            ESCREVA ("Você deve inserir somente números inteiros de preferencia de 1 a 5")
+        IF option != INTEIRO THEN
+            PRINT ("Você deve inserir somente números inteiros de preferencia de 1 a 5")
             option = 0
-        FIM SE
+        END IF
 
-        SE option < 1 OU option > 5 ENTÃO
-            ESCREVA ("Essa opção não existe, por favor insira uma opção válida.")
+        IF option < 1 OU option > 5 THEN
+            PRINT ("Essa opção não existe, por favor insira uma opção válida.")
             clean(3)
-        FIM SE
-        SENÃO
-            SE option == 5 ENTÃO
-                TERMINA_LOOP
-            FIM SE
-            SENÃO
+        END IF
+        ELSE
+            IF option == 5 THEN
+                END_LOOP
+            END IF
+            ELSE
                 show_result(option)
-                ESCREVA ("Deseja sair da aplicação? (S/N): ")
-                LEIA(answer)
-                SE answer[0] == "s" ENTÃO
-                    TERMINA_LOOP
-                FIM SE
+                PRINT ("Deseja sair da aplicação? (S/N): ")
+                SCANF(answer)
+                IF answer[0] == "s" THEN
+                    END_LOOP
+                END IF
                 clean(1)
-            FIM SENÃO
-        FIM SENÃO
-    FIM ENQUANTO
+            END ELSE
+        END ELSE
+    END WHILE
 
     FUNÇÃO show_result(option)
     INICIO
@@ -73,50 +73,50 @@
     FIM
 
     FUNÇÃO clean(seconds)
-    INICIO
-        ESPERE(seconds)
+    BEGIN
+        ESPERA(seconds)
         
-        SE PLATAFORMA == WINDOWNS ENTÃO
+        IF PLATAFORMA == WINDOWNS THEN
             LIMPAR_TELA_WINDOWNS()
-        FIM SE
-        SENÃO
+        END IF
+        ELSE
             LIMPAR_TELA_OUTRA_PLATAFORMA()
-        FIM SENÃO
-    FIM
+        END ELSE
+    END
 
     FUNÇÃO close()
-    INICIO
-        ESCREVA("Finalizando o programa...")
+    BEGIN
+        PRINT("Finalizando o programa...")
         ESPERE(1)
-    FIM
+    END
 
     FUNÇÃO next_launch()
-    INICIO
+    BEGIN
         connection = Connect("https://api.spacexdata.com/v3/launches/next")
-        ESCREVA(connection.result)
-    FIM
+        PRINT(connection.result)
+    END
 
     FUNÇÃO upcoming_launches()
-    INICIO
+    BEGIN
         connection = Connect("https://api.spacexdata.com/v3/launches/upcoming")
-        PARA CADA result EM connection.result
-            ESCREVA(result)
-            ESCREVA("----------------------------------------------------------\n")
-        FIM PARA
-    FIM
+       FOR EACH result EM connection.result
+            PRINT(result)
+            PRINT("----------------------------------------------------------\n")
+        END FOR
+    END
 
     FUNÇÃO latest_launch()
-    INICIO
+    BEGIN
         connection = Connect("https://api.spacexdata.com/v3/launches/latest")
-        ESCREVA(connection.result)
-    FIM
+        PRINT(connection.result)
+    END
 
     FUNÇÃO past_launches():
-    INICIO
+    BEGIN
         connection = Connect("https://api.spacexdata.com/v3/launches/past")
-        PARA CADA result EM connection.result
-            ESCREVA(result)
-            ESCREVA("----------------------------------------------------------\n")
-    FIM
+        FOR EACH result IN connection.result
+            PRINT(result)
+            PRINT("----------------------------------------------------------\n")
+    END
 
 ```
