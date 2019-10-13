@@ -2,7 +2,7 @@
 
 ## 1. Walkthrough
 
-É uma técnica aplicada em grupo, onde o autor leva a equipe através de uma execução simulada ou manual do produto utilizando critérios definidos, é interessante de ser aplicada, pois, além do autor do programa, diversar pessoas estão envolvidas no processo, oferecendo diferentes pontos de vista sobre o artefato. Esse procedimento frequentemente expõe uma grande quantidade de erros e suas localizações precisas no código, permitindo que sejam corrigidos de uma só vez.
+É uma técnica aplicada em grupo, onde o autor leva a equipe através de uma execução simulada ou manual do produto utilizando critérios definidos, é interessante de ser aplicada, pois, além do autor do programa, diversas pessoas estão envolvidas no processo, oferecendo diferentes pontos de vista sobre o artefato. Esse procedimento frequentemente expõe uma grande quantidade de erros e suas localizações precisas no código, permitindo que sejam corrigidos de uma só vez.
 
 O Walkthrough pode ser feito de maneira automática, estática ou funcional, geralmente o custo do uso desta técnica pode váriar de acordo com a quantidade de pessoas envolvidas, tamanho e complexidade do projeto e artefatos envolvidos, geralmente classificada com custo médio.
 
@@ -299,9 +299,9 @@ O programa não apresentou erros de execução durante sua execução quando con
 
 * Durante a execução do programa, ao selecionarmos alguma das opções 3 ou 4, o programa dá a sensação ao usuário de que está travado, mas na verdade está buscando as informações requisitadas na API, então uma simples mensagem de "carregando" ou "buscando" ajudaria muito na percepção do usuário sobre o programa.
 
-Durante e execução do programa sem conexão com internet
+Durante a execução do programa sem conexão com internet
 
-* Durante a execução do programa, ao selecinoar-mos quaisquer opções exceto a de finalizar o programa, temos um feedback de falha de comunicação com a api, mas ao mesmo tempo temos um erro de atributo da classe Connect, o que para um possível usuário deste software sem conhecimentos em programação ou até mesmo um programador que não possui acesso ao código, ou não conhece o código, não conseguiria resolver este problema.
+* Durante a execução do programa, ao selecionarmos quaisquer opções exceto a de finalizar o programa, temos um feedback de falha de comunicação com a api, mas ao mesmo tempo temos um erro de atributo da classe Connect, o que para um possível usuário deste software sem conhecimentos em programação ou até mesmo um programador que não possui acesso ao código, ou não conhece o código, não conseguiria resolver este problema.
 
 Execução com entradas incorretas
 
