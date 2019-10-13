@@ -53,26 +53,25 @@
         END ELSE
     END WHILE
 
-    FUNÇÃO show_result(option)
-    INICIO
-        SE option == NEXT_LAUNCH ENTÃO
+    FUNCTION show_result(option)
+    BEGIN
+        IF option == NEXT_LAUNCH THEN
             next_launch()
-        FIM SE
-        SENÃO SE option == LATEST_LAUNCH ENTÃO
+        END IF
+        ELSE IF option == LATEST_LAUNCH THEN
             latest_launch()
-        FIM SENÃO SE
-        SENÃO SE option == UPCOMING_LAUNCHES ENTÃO
+        END ELSE IF
+        ELSE IF option == UPCOMING_LAUNCHES THEN
             upcoming_launches()
-        FIM SENÃO SE
-        SENÃO SE option == PAST_LAUNCHES ENTÃO
+        END ELSE IF
+        ELSE IF option == PAST_LAUNCHES THEN
             past_launches()
-        FIM SENÃO SE
-        SENÃO
-            ESCREVA ("Opção invalida")
-        FIM SENÃO
-    FIM
-
-    FUNÇÃO clean(seconds)
+        END ELSE IF
+        ELSE
+            PRINT ("Opção invalida")
+        END ELSE
+    END
+    FUNCTION clean(seconds)
     BEGIN
         ESPERA(seconds)
         
@@ -84,28 +83,28 @@
         END ELSE
     END
 
-    FUNÇÃO close()
+    FUNCTION close()
     BEGIN
         PRINT("Finalizando o programa...")
         ESPERE(1)
     END
 
-    FUNÇÃO next_launch()
+    FUNCTION next_launch()
     BEGIN
         connection = Connect("https://api.spacexdata.com/v3/launches/next")
         PRINT(connection.result)
     END
 
-    FUNÇÃO upcoming_launches()
+    FUNCTION upcoming_launches()
     BEGIN
         connection = Connect("https://api.spacexdata.com/v3/launches/upcoming")
-       FOR EACH result EM connection.result
+       FOR EACH result IN connection.result
             PRINT(result)
             PRINT("----------------------------------------------------------\n")
         END FOR
     END
 
-    FUNÇÃO latest_launch()
+    FUNCTION latest_launch()
     BEGIN
         connection = Connect("https://api.spacexdata.com/v3/launches/latest")
         PRINT(connection.result)
