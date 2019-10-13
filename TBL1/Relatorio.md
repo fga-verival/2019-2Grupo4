@@ -119,3 +119,81 @@
     END
 
 ```
+
+
+### api_connection.py
+
+```
+IMPORT launch FROM models
+
+
+CLASS Connect
+BEGIN
+    constructor(url, header<-None, params<-none)
+    IF header != NIL then
+        self.__headers <- headers
+    END IF
+    ELSE then
+        header <- {'Accept': 'application/json'}
+    END ELSE
+
+    try
+    BEGIN
+
+    IF params != NIL then
+        self.__response <- request.get(url, self.__headers, params=params)
+    END IF
+    ELSE then
+        self.__response <- requests.get(url, self.__headers)
+    END ELSE
+
+    self.__result <- self.__response.json()
+
+    END
+
+    except
+    BEGIN
+        print("Ocorreu um erro na comunicação com a API SpaceX")
+    END
+
+
+    FUNCTION result():
+    BEGIN
+        IF result type == dict type then
+            return Launch(
+                flight_number<-self.__result.get('flight_number'),
+                mission_name<-self.__result.get('mission_name'),
+                rocket<-self.__result.get('rocket').get('rocket_name'),
+                rocket_type<-self.__result.get('rocket').get('rocket_type'),
+                launch_success<-self.__result.get('launch_success'),
+                launch_date<-self.__result.get('launch_date_utc'),
+                launch_year<-self.__result.get('launch_year')
+            )
+        END IF
+
+        launchs <- []
+
+        FOR each result in self.__result
+            launchs.append(
+                Launch(
+                    flight_number<-result.get('flight_number'),
+                    mission_name<-result.get('mission_name'),
+                    rocket<-result.get('rocket').get('rocket_name'),
+                    rocket_type<-result.get('rocket').get('rocket_type'),
+                    launch_success<-result.get('launch_success'),
+                    launch_date<-result.get('launch_date_utc'),
+                    launch_year<-result.get('launch_year')
+                )
+            )
+        END FOR
+
+        return launchs
+    END
+
+    FUNCTION response
+    BEGIN
+        return self.__response
+    END
+
+END
+```
