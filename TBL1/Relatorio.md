@@ -199,3 +199,94 @@ BEGIN
 
 END
 ```
+
+### launch.py
+
+```
+FROM datetime IMPORT datetime
+
+CLASS launch
+BEGIN
+
+    FUNCTION init(flight_number, mission_name, rocket,
+                 rocket_type, launch_success,
+                 launch_year, launch_date)
+    BEGIN
+
+        flight_number <- flight_number
+        mission_name <- mission_name
+        launch_date <- launch_date
+        launch_year <- launch_year
+        rocket <- rocket
+        rocket_type <- rocket_type
+        launch_success <- launch_success
+    
+    END
+
+    FUNCTION str
+    BEGIN
+
+        IF launch_success != NIL then
+            print( flight_number, mission_name, rocket,
+             launch_year, launch_date, launch_success
+        END IF
+        
+        print( flight_number, mission_name, rocket,
+             launch_year, launch_date, launch_success
+
+    END
+
+    FUNCTION flight_number
+    BEGIN
+
+        print ("Número do Voo", flight_number)
+
+    END
+
+    FUNCTION mission_name
+    BEGIN
+
+        print( "Missão", mission_name)
+
+    END
+    
+    FUNCTION launch_date
+    BEGIN
+
+        date <- datetime.(launch_date)
+
+        print( "Data de Lançamento (UTC):",date)
+
+    END
+    
+    FUNCTION launch_year
+    BEGIN
+
+        print( "Ano de Lançamento",launch_year)
+
+    END
+
+    
+    FUNCTION rocket
+    BEGIN
+
+        print( "Foguete",rocket,rocket_type)
+
+    END
+
+    
+    FUNCTION launch_success
+    BEGIN
+
+        IF launch_success == TRUE then
+            print( "Lançamento realizado com sucesso!")
+        END IF
+
+        ELSE then
+            print( "Lançamento falhou!")
+        END ELSE
+    
+    END
+
+END
+```
