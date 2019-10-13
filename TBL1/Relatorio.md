@@ -293,6 +293,64 @@ BEGIN
 END
 ```
 
+## 3. Simulação
+```bash
+-- Inicia programa "spaceX.py" --
+
+:output do programa
+"O que você deseja visualizar?
+"
+"1) Próximo Lançamento
+"2) Último Lançamento
+"3) Próximos Lançamentos
+"4) Lançamentos Passados
+"5) Sair
+"
+"Insira uma opção:
+:fim output
+
+>input do usuário = 2
+  $ atribui à variavel "option" o valor 2
+  $ passa pelo primeiro if, cujo qual têm o papel de garantir que a entrada é válida (um número inteiro)
+  $ passa pelo segundo if, cujo qual têm o papel de garantir que o número escolhido é valido (entre 1 e 5)
+  $ entra no else
+  $ passa pelo if, que têm o papel de finalizar o programa caso o input do usuário tenha sido 5
+  $ entra no else
+  $ chama a função "show_result()" com a opção selecionada pelo usuário (2)
+    $ passa pelo primeiro if, que tem o objetivo de mostrar o próximo lançamento
+    $ entra no segundo if, que corresponde à entrada do usuário: mostrar o último lançamento
+    $ chama a função "latest_launch()"
+      $ consome a api da spaceX
+      $ retorna o resultado 
+
+:output do programa
+"
+"Número do Voo: 83
+"Missão: Amos-17
+"Foguete: Falcon 9 (FT)
+"Ano de Lançamento: 2019
+"Data de Lançamento (UTC): 06/08/2019 às 22:52
+"Lançamento realizado com sucesso!
+"
+:fim output
+
+      $ fim da função "latest_launch()"
+    $ fim da função "show_result()"
+  $ solicita se o usuário quer continuar a interagir com o programa ou sair
+:output do programa
+"Deseja sair da aplicação? (S/N):
+:fim output
+
+>input do usuário = "S"
+
+  $ entra no primeiro if, que termina a execução do programa 
+:output do programa
+"Finalizando o programa...
+:fim output
+
+-- Fim do programa "spaceX.py" --
+```
+
 ## 4. Funcionamento do programa
 
 O programa não apresentou erros de execução durante sua execução quando conectado a internet.
