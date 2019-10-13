@@ -3,7 +3,9 @@
 ## 1. Walkthrough
 
 É uma técnica aplicada em grupo, onde o autor leva a equipe através de uma execução simulada ou manual do produto utilizando critérios definidos, é interessante de ser aplicada, pois, além do autor do programa, diversar pessoas estão envolvidas no processo, oferecendo diferentes pontos de vista sobre o artefato. Esse procedimento frequentemente expõe uma grande quantidade de erros e suas localizações precisas no código, permitindo que sejam corrigidos de uma só vez.
+
 O Walkthrough pode ser feito de maneira automática, estática ou funcional, geralmente o custo do uso desta técnica pode váriar de acordo com a quantidade de pessoas envolvidas, tamanho e complexidade do projeto e artefatos envolvidos, geralmente classificada com custo médio.
+
 A técnica é interessante, pois fornece uma base para questionar a lógica do programador e ajudar a identificar problemas no sistema.
 
 
