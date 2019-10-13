@@ -32,12 +32,12 @@ A técnica é interessante, pois fornece uma base para questionar a lógica do p
         PRINT ("Insira uma opção: ")
         SCAN(option) 
         
-        IF option != INTEIRO THEN
+        IF option != INT THEN
             PRINT ("Você deve inserir somente números inteiros de preferencia de 1 a 5")
             option = 0
         END IF
 
-        IF option < 1 OU option > 5 THEN
+        IF option < 1 OR option > 5 THEN
             PRINT ("Essa opção não existe, por favor insira uma opção válida.")
             clean(3)
         END IF
@@ -48,7 +48,7 @@ A técnica é interessante, pois fornece uma base para questionar a lógica do p
             ELSE
                 show_result(option)
                 PRINT ("Deseja sair da aplicação? (S/N): ")
-                SCANF(answer)
+                SCAN (answer)
                 IF answer[0] == "s" THEN
                     END_LOOP
                 END IF
@@ -77,7 +77,7 @@ A técnica é interessante, pois fornece uma base para questionar a lógica do p
     END
     FUNCTION clean(seconds)
     BEGIN
-        ESPERA(seconds)
+        SLEEP(seconds)
         
         IF PLATAFORMA == WINDOWNS THEN
             LIMPAR_TELA_WINDOWNS()
@@ -90,18 +90,18 @@ A técnica é interessante, pois fornece uma base para questionar a lógica do p
     FUNCTION close()
     BEGIN
         PRINT("Finalizando o programa...")
-        ESPERE(1)
+        SLEEP(1)
     END
 
     FUNCTION next_launch()
     BEGIN
-        connection = Connect("https://api.spacexdata.com/v3/launches/next")
+        connection <- Connect("https://api.spacexdata.com/v3/launches/next")
         PRINT(connection.result)
     END
 
     FUNCTION upcoming_launches()
     BEGIN
-        connection = Connect("https://api.spacexdata.com/v3/launches/upcoming")
+        connection <- Connect("https://api.spacexdata.com/v3/launches/upcoming")
        FOR EACH result IN connection.result
             PRINT(result)
             PRINT("----------------------------------------------------------\n")
@@ -110,13 +110,13 @@ A técnica é interessante, pois fornece uma base para questionar a lógica do p
 
     FUNCTION latest_launch()
     BEGIN
-        connection = Connect("https://api.spacexdata.com/v3/launches/latest")
+        connection <- Connect("https://api.spacexdata.com/v3/launches/latest")
         PRINT(connection.result)
     END
 
     FUNÇÃO past_launches():
     BEGIN
-        connection = Connect("https://api.spacexdata.com/v3/launches/past")
+        connection <- Connect("https://api.spacexdata.com/v3/launches/past")
         FOR EACH result IN connection.result
             PRINT(result)
             PRINT("----------------------------------------------------------\n")
