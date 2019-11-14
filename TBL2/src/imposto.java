@@ -22,7 +22,7 @@ public class imposto{
         System.out.println("Digite a taxa de juros anual:");
         taxa_juros = sc.nextDouble();
 
-        taxa_juros_anual=taxa_juros/100;
+        taxa_juros_anual = taxa_juros / 100;
         
 
         //1 ano = 365 dias
@@ -30,37 +30,37 @@ public class imposto{
         // ano <= 180
         if(ano <= 0.493150685){
 
-            rendimento_bruto = aplicacao_inicial * (ano*taxa_juros_anual);
+            rendimento_bruto = aplicacao_inicial * (ano * taxa_juros_anual);
             imposto_de_renda = rendimento_bruto * 0.225;
-            rendimento_liquido = ((aplicacao_inicial + (rendimento_bruto-imposto_de_renda))/aplicacao_inicial)*100-100;
+            rendimento_liquido = ((aplicacao_inicial + (rendimento_bruto - imposto_de_renda)) / aplicacao_inicial) * 100 - 100;
         }                        
 
         // ano > 180 dias e < 360 dias
         else if(ano > 0.493150685 && ano <= 0.98630137){
 
-            rendimento_bruto = aplicacao_inicial * (ano*taxa_juros_anual);
+            rendimento_bruto = aplicacao_inicial * (ano * taxa_juros_anual);
             imposto_de_renda = rendimento_bruto * 0.20;
-            rendimento_liquido = ((aplicacao_inicial + (rendimento_bruto-imposto_de_renda))/aplicacao_inicial)*100-100;
+            rendimento_liquido = ((aplicacao_inicial + (rendimento_bruto - imposto_de_renda)) / aplicacao_inicial)* 100 - 100;
         }   
         
         // ano > 180 dias e <= 360 dias
         else if(ano > 0.98630137 && ano <=1.97260274){
 
-            rendimento_bruto = aplicacao_inicial * (ano*taxa_juros_anual);
+            rendimento_bruto = aplicacao_inicial * (ano * taxa_juros_anual);
             imposto_de_renda = rendimento_bruto * 0.175;
-            rendimento_liquido = ((aplicacao_inicial + (rendimento_bruto-imposto_de_renda))/aplicacao_inicial)*100-100;
+            rendimento_liquido = ((aplicacao_inicial + (rendimento_bruto - imposto_de_renda)) / aplicacao_inicial) * 100 - 100;
         }     
         
         // ano > 360 dias e <= 720 dias                 
-        else if(ano< 1.97260274){
+        else if(ano > 1.97260274){
 
-            rendimento_bruto = aplicacao_inicial * (ano*taxa_juros_anual);
+            rendimento_bruto = aplicacao_inicial * (ano * taxa_juros_anual);
             imposto_de_renda = rendimento_bruto * 0.15;
             rendimento_liquido = ((aplicacao_inicial + (rendimento_bruto-imposto_de_renda))/aplicacao_inicial)*100-100;
         }
 
-        System.out.println("Rendimento Bruto: $" + rendimento_bruto);
-        System.out.println("Imposto de Renda: $" + imposto_de_renda);
+        System.out.println("Rendimento Bruto: R$ " + rendimento_bruto);
+        System.out.println("Imposto de Renda: R$ " + imposto_de_renda);
         System.out.println("Rendimemento Liquído (%): " + rendimento_liquido);
 
     }
