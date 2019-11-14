@@ -4,6 +4,7 @@ public class imposto{
     public static void main(String[] args){
         
         Scanner sc = new Scanner(System.in);
+        double dias;
         double ano;
         double aplicacao_inicial;
         double taxa_juros;
@@ -13,8 +14,10 @@ public class imposto{
         double rendimento_liquido = 0;
 
 
-        System.out.println("Digite número de anos da aplicação:");
-        ano = sc.nextDouble();
+        System.out.println("Digite número de dias da aplicação:");
+        dias = sc.nextDouble();
+
+        ano = dias / 365;
         
         System.out.println("Digite o valor da aplicação inicial:");
         aplicacao_inicial = sc.nextDouble();
@@ -28,6 +31,7 @@ public class imposto{
         //1 ano = 365 dias
         
         // ano <= 180
+
         if(ano <= 0.493150685){
 
             rendimento_bruto = aplicacao_inicial * (ano * taxa_juros_anual);
@@ -59,9 +63,9 @@ public class imposto{
             rendimento_liquido = ((aplicacao_inicial + (rendimento_bruto-imposto_de_renda))/aplicacao_inicial)*100-100;
         }
 
-        System.out.println("Rendimento Bruto: R$ " + rendimento_bruto);
-        System.out.println("Imposto de Renda: R$ " + imposto_de_renda);
-        System.out.println("Rendimemento Liquído (%): " + rendimento_liquido);
+        System.out.println("Rendimento Bruto: R$ " + String.format("%.2f", rendimento_bruto));
+        System.out.println("Imposto de Renda: R$ " + String.format("%.2f", imposto_de_renda));
+        System.out.println("Rendimemento Liquído (%): " + String.format("%.4f", rendimento_liquido));
 
     }
 }
