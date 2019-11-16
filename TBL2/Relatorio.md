@@ -22,6 +22,12 @@ Sobre a técnica de triangularização, Kent Beck, em seu livro, descreve essa c
 
 Para triangularizar nessas situações, primeiramente se generaliza a aplicação escrevendo casos especiais e óbvios para passar em testes simples, posteriormente adicionando casos específicos de testes para aumentar a complexidade das especificações e a generalização da implementação, para finalizar remove-se os aspectos redundantes do código.
 
+### Crítica sobre as técnicas
+
+Dificuldades: Fazer os testes para o primeiro caso foi um desafio, já que era uma maneira nova de testar, e tudo deveria ser feito com muita atenção. Alguns cálculos da implementação também tiveram sua dificuldade.
+
+Facilidades: Depois do primeiro caso, os outros dois foram mais tranquilos. Enquanto alguns cálculos da implementação estavam difíceis, outros estavam relativamente simples.
+
 ## Referências
 
 [1] Test-driven development, Kent Beck
