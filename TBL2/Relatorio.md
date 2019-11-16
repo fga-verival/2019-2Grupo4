@@ -3,7 +3,7 @@
 |Estudante|Matricula|Participação|
 |:--|:--|:--|
 |Guilherme de Lyra P.|15/0128231||
-|Heron Rodrigues Sousa|16/0124484||
+|Heron Rodrigues Sousa|16/0124484|100|
 |Lucas Ganda Carvalho|17/0039668|90|
 |Victor Rodrigues Silva|16/0019516||
 |Marcos Vinícius R. da Conceição|17/0150747||
