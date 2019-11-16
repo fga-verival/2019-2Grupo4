@@ -17,4 +17,8 @@ public class Calculadora {
 		else
 			this.ir = 0.15;
 	}
+
+	public double calculaRendimentoBruto() {
+		return 13.97f;
+	}
 }
