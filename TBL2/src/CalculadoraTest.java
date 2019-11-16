@@ -50,4 +50,11 @@ public class CalculadoraTest {
 		Calculadora calc = new Calculadora(n, p, i);
 		assertEquals(calc.calculaImpostoRenda(), resposta.d, 0.01);
 	}
+
+	@Test
+	public void RendimentoLiquidoTest() {
+		Calculadora calc = new Calculadora(60, 1000.00f, 8.5f);
+		double rl = 1.0829f;
+		assertEquals(calc.calculaRendimentoLiquido(), rl, 0.0001);
+	}
 }
