@@ -2,13 +2,13 @@
 
 |Estudante|Matricula|Participação|
 |:--|:--|:--|
-|Guilherme de Lyra P.|15/0128231||
+|Guilherme de Lyra P.|15/0128231|100|
 |Heron Rodrigues Sousa|16/0124484|100|
-|Lucas Ganda Carvalho|17/0039668|90|
+|Lucas Ganda Carvalho|17/0039668|100|
 |Victor Rodrigues Silva|16/0019516|100|
-|Marcos Vinícius R. da Conceição|17/0150747||
+|Marcos Vinícius R. da Conceição|17/0150747|100|
 |Henrique Martins de Messias|17/0050394|100|
-|Weiller Fernandes Pereira|13/0137995||
+|Weiller Fernandes Pereira|13/0137995|100|
 
 -----
 
