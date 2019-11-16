@@ -52,16 +52,8 @@ public class CalculadoraTest {
 	}
 
 	@Test
-	public void RendimentoLiquidoTest1() {
-		Calculadora calc = new Calculadora(60, 1000.00f, 8.5f);
-		double rl = 1.0829f;
-		assertEquals(calc.calculaRendimentoLiquido(), rl, 0.0001);
-	}
-
-	@Test
-	public void RendimentoLiquidoTest2() {
-		Calculadora calc = new Calculadora(1000, 100.00f, 7.5f);
-		double rl = 17.4658f;
-		assertEquals(calc.calculaRendimentoLiquido(), rl, 0.0001);
+	public void RendimentoLiquidoTest() {
+		Calculadora calc = new Calculadora(n, p, i);
+		assertEquals(calc.calculaRendimentoLiquido(), resposta.rl, 0.0001);
 	}
 }
