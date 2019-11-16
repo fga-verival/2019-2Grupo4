@@ -18,6 +18,10 @@ A técnica de falsificação, também conhecida como fake it, parte do princípi
 
 Sobre a técnica de triangularização, Kent Beck, em seu livro, descreve essa como a técnica mais conservadora utilizada no *Test-Driven-Development*, pois primeiramente são usados casos mais simples até testes mais específicos. É uma analogia com a triangularização de radares, dois ou mais radares são usados para determinar a posição exata de uma objeto.
 
-## Referencias
+### Como triangularizar com parâmetros em frameworks de testes unitários 
+
+Para triangularizar nessas situações, primeiramente se generaliza a aplicação escrevendo casos especiais e óbvios para passar em testes simples, posteriormente adicionando casos específicos de testes para aumentar a complexidade das especificações e a generalização da implementação, para finalizar remove-se os aspectos redundantes do código.
+
+## Referências
 
 [1] Test-driven development, Kent Beck
