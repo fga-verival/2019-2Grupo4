@@ -7,7 +7,7 @@
 |Lucas Ganda Carvalho|17/0039668||
 |Victor Rodrigues Silva|16/0019516||
 |Marcos Vinícius R. da Conceição|17/0150747||
-|Henrique Martins de Messias|17/0050394||
+|Henrique Martins de Messias|17/0050394|100|
 |Weiller Fernandes Pereira|13/0137995||
 
 -----
