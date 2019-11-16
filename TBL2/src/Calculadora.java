@@ -19,6 +19,6 @@ public class Calculadora {
 	}
 
 	public double calculaRendimentoBruto() {
-		return 13.97f;
+		return this.i*(this.n*this.p/365.0f);
 	}
 }
