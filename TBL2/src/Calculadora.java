@@ -19,10 +19,10 @@ public class Calculadora {
 	}
 
 	public double calculaRendimentoBruto() {
-		return this.i*(this.n*this.p/365.0f);
+		return i*(n*p/365.0f);
 	}
 
 	public double calculaImpostoRenda() {
-		return 3.14;
+		return calculaRendimentoBruto()*ir;
 	}
 }
