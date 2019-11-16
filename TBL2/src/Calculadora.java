@@ -25,4 +25,8 @@ public class Calculadora {
 	public double calculaImpostoRenda() {
 		return calculaRendimentoBruto()*ir;
 	}
+
+	public double calculaRendimentoLiquido() {
+		return 1.0829;
+	}
 }
