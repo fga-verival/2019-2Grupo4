@@ -24,9 +24,16 @@ Para triangularizar nessas situações, primeiramente se generaliza a aplicaçã
 
 ### Crítica sobre as técnicas
 
-Dificuldades: Fazer os testes para o primeiro caso foi um desafio, já que era uma maneira nova de testar, e tudo deveria ser feito com muita atenção. Alguns cálculos da implementação também tiveram sua dificuldade.
+**Dificuldades** 
+- Fazer os testes para o primeiro caso foi um desafio, já que era uma maneira nova de testar, e tudo deveria ser feito com muita atenção. 
+- Alguns cálculos da implementação também tiveram sua dificuldade.
+- Falta de conhecimento com a linguagem.
 
-Facilidades: Depois do primeiro caso, os outros dois foram mais tranquilos. Enquanto alguns cálculos da implementação estavam difíceis, outros estavam relativamente simples.
+**Facilidades** 
+ - Depois do primeiro caso, os outros dois foram mais tranquilos. 
+ - Enquanto alguns cálculos da implementação estavam difíceis, outros estavam relativamente simples.
+ - Técnicas ajudam no entendimento e escrita dos testes, desde a utilização da falsificação até testes que forçam a generalização da implementação.
+ 
 
 ## Referências
 
