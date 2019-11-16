@@ -46,9 +46,16 @@ public class CalculadoraTest {
 	}
 
 	@Test
-	public void ImpostoRendaTest() {
+	public void ImpostoRendaTest1() {
 		Calculadora calc = new Calculadora(60, 1000.00f, 8.5f);
 		double d = 3.14f;
+		assertEquals(calc.calculaImpostoRenda(), d, 0.01);
+	}
+
+	@Test
+	public void ImpostoRendaTest2() {
+		Calculadora calc = new Calculadora(1000, 100.00f, 7.5f);
+		double d = 3.08f;
 		assertEquals(calc.calculaImpostoRenda(), d, 0.01);
 	}
 }
