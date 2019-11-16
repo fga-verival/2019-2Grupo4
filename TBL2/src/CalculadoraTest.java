@@ -44,4 +44,11 @@ public class CalculadoraTest {
 		Calculadora calc = new Calculadora(n, p, i);
 		assertEquals(calc.calculaRendimentoBruto(), resposta.rb, 0.01);
 	}
+
+	@Test
+	public void ImpostoRendaTest() {
+		Calculadora calc = new Calculadora(60, 1000.00f, 8.5f);
+		double d = 3.14f;
+		assertEquals(calc.calculaImpostoRenda(), d, 0.01);
+	}
 }
